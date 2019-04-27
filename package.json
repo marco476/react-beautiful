@@ -1,8 +1,8 @@
 {
   "name": "beautiful",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
-  "main": "build/index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -26,7 +26,6 @@
   },
   "homepage": "https://gitlab.com/marco.cante.081/beautiful#readme",
   "scripts": {
-    "build": "./node_modules/@babel/cli/bin/babel.js src -d build --copy-files",
-    "postinstall": "npm run build"
+    "build": "./node_modules/@babel/cli/bin/babel.js src -d lib --copy-files"
   }
 }
