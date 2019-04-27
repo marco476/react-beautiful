@@ -1,37 +1,32 @@
 {
-  "homepage": "https://gitlab.com/marco.cante.081/beautiful",
   "name": "beautiful",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.com/marco.cante.081/beautiful.git"
-  },
-  "author": "@marco476",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://gitlab.com/marco.cante.081/beautiful/issues"
-  },
+  "main": "build/index.js",
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
+    "@babel/preset-react": "^7.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/marco.cante.081/beautiful.git"
+  },
+  "author": "Marco Cante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/marco.cante.081/beautiful/issues"
+  },
+  "homepage": "https://gitlab.com/marco.cante.081/beautiful#readme",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "webpack --mode production --config ./webpack.config.js"
+    "build": "babel src -d build --copy-files",
+    "prepare": "yarn run build"
   }
 }
