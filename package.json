@@ -27,6 +27,6 @@
   "homepage": "https://gitlab.com/marco.cante.081/beautiful#readme",
   "scripts": {
     "build": "babel src -d build --copy-files",
-    "prepare": "npm run build"
+    "postinstall": "npm run build"
   }
 }
