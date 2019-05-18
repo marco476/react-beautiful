@@ -1,7 +1,7 @@
 {
   "name": "beautiful",
   "version": "1.2.0",
-  "description": "Library of reusable components",
+  "description": "Beautiful - Boost up your Material components",
   "main": "lib/index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
