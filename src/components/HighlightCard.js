@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, oneOfType, string } from 'prop-types';
+import { node, oneOfType, string, shape } from 'prop-types';
 import styled from 'styled-components'
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
