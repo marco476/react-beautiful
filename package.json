@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "React Beautiful - Boost up your Material components",
   "main": "lib/index.js",
   "dependencies": {
