@@ -1,4 +1,4 @@
-# Beautiful - Boost up your Material components
+# Beautiful - Boost up your React components
 
 Beautiful project add some **useful** feature to **[Material](https://material-ui.com/)** components **without touch the core base components**.
 
@@ -13,6 +13,12 @@ The new props are:
 - **footer**: set Dialog footer by [DialogActions](https://material-ui.com/api/dialog-actions/) component. Accept **string** or **node**.
 - **footerClassName**: set Dialog description class name. Accept **string**.
 - **showClose**: create a close icon by [Fab](https://material-ui.com/api/fab/) component. Accept a **boolean** value. Require **onClose** prop function.
+
+### Image
+Image component is an easy and usefull component for create a responsive image box with optionally grayed filter. The component's props are:
+- **height**: set image height. Accept a **number**.
+- **src**: set image url like *src* attribute on `img` html tag. Accept a **string**.
+- **grayed**: set gray filter. The filter will be remove on hover/focus. Accept a **boolean**.
 
 ### Snackbar
 Snackbar component accept **[all Material Snackbar props](https://material-ui.com/api/snackbar/)**, but you can pass other props for render a **complete Snackbar** component.
