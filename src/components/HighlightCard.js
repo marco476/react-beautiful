@@ -11,19 +11,22 @@ const Text = styled(Typography)`&& {color: white;}`;
 const HighlightCard = ({ color, icon, value, label }) =>
   <Card style={{ backgroundColor: color && (color[800] || color) }}>
     <Grid container alignItems="center" spacing={8}>
-      <Grid item xs={12} md={3}>
-        <Grid container justify="center">
-          {icon}
+      {icon &&
+        <Grid item xs={12} md={3}>
+          <Grid container justify="center">
+            {icon}
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid item xs={12} md={9} style={{ backgroundColor: color && (color[600] || color) }}>
+      }
+      <Grid
+        item
+        xs={12}
+        md={icon ? 9 : 12}
+        style={{ backgroundColor: color && (color[600] || color) }}
+      >
         <CardContent>
-          <Text variant="h6" gutterBottom>
-            {value}
-          </Text>
-          <Text variant="subtitle1">
-            {label}
-          </Text>
+          {value && <Text variant="h6" gutterBottom={label}>{value}</Text>}
+          {label && <Text variant="subtitle1">{label}</Text>}
         </CardContent>
       </Grid>
     </Grid>

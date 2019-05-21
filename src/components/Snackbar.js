@@ -10,8 +10,8 @@ import red from '@material-ui/core/colors/red';
 const CustomSnack = styled(Snackbar)`
   && {
     > div {
-      ${props => props.variant === 'success' && `background-color: ${green[400]};`}
-      ${props => props.variant === 'fail' && `background-color: ${red[400]};`}
+      ${props => props.variant === 'success' && `background-color: ${green[600]};`}
+      ${props => props.variant === 'fail' && `background-color: ${red[600]};`}
     }
   }
 `;
