@@ -16,16 +16,16 @@ const CustomSnack = styled(Snackbar)`
   }
 `;
 
-const Snack = ({ onExited, action = [], showClose, ...rest }) => (
+const Snack = ({ onClose, action = [], showClose, ...rest }) => (
 	<CustomSnack
-		onExited={onExited}
+    onClose={onClose}
 		action={[
       ...action,
       showClose &&
         <IconButton
           key="close"
           color="inherit"
-          onClick={onExited}
+          onClick={onClose}
         >
           <CloseIcon />
         </IconButton>,
@@ -35,7 +35,7 @@ const Snack = ({ onExited, action = [], showClose, ...rest }) => (
 );
 
 Snack.propTypes = {
-  onExited: func.isRequired,
+  onClose: func.isRequired,
   showClose: bool,
   action: array
 };
