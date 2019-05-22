@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "description": "React Beautiful - Boost up your React components",
   "main": "lib/index.js",
   "dependencies": {

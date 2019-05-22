@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import breakpoints from '../utils/responsive';
 
 const Image = styled.div`
-  display: none;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: ${props => props.height}px;
   background-image: url(${props => props.src});
-  margin-bottom: 16px;
+  
+  ${props => !props.persistent && `display: none;`}
   
   ${props => props.grayed && `
     transform: transale3d(0,0,0);
