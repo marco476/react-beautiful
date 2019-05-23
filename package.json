@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "React Beautiful - Boost up your React components",
   "main": "lib/index.js",
   "dependencies": {
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/marco.cante.081/beautiful.git"
+    "url": "https://github.com/marco476/react-beautiful"
   },
   "author": "Marco Cante",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/marco.cante.081/beautiful/issues"
+    "url": "https://github.com/marco476/react-beautiful/issues"
   },
-  "homepage": "https://gitlab.com/marco.cante.081/beautiful#readme",
+  "homepage": "https://github.com/marco476/react-beautiful#readme",
   "scripts": {
     "build": "./node_modules/@babel/cli/bin/babel.js src -d lib --copy-files"
   }
