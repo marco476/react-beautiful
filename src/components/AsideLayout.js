@@ -69,8 +69,8 @@ class AsideLayout extends PureComponent {
                   </IconButton>
                 </Grid>
               )}
+              <Grid item>{children}</Grid>
             </Grid>
-            <Grid item>{children}</Grid>
           </Grid>
         </Grid>
       </React.Fragment>
