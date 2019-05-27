@@ -44,7 +44,7 @@ class AsideLayout extends PureComponent {
             <Grid item xs={12} md={4} lg={3} xl={2}>
               <Grid container direction="column">
                 {collapsible && (
-                  <Grid item>
+                  <Grid item xs={12}>
                     <IconButton onClick={this.handleCloseAside}>
                       <ChevronLeftIcon />
                       <Text variant="subtitle1" color="textSecondary">
@@ -53,14 +53,14 @@ class AsideLayout extends PureComponent {
                     </IconButton>
                   </Grid>
                 )}
-                <Grid item>{aside}</Grid>
+                <Grid item xs={12}>{aside}</Grid>
               </Grid>
             </Grid>
           )}
           <Grid item {...childrenBreakpoints}>
             <Grid container direction="column">
               {!isOpen && collapsible && (
-                <Grid item>
+                <Grid item xs={12}>
                   <IconButton onClick={this.handleOpenAside}>
                     <ChevronRightIcon />
                     <Text variant="subtitle1" color="textSecondary">
@@ -69,7 +69,7 @@ class AsideLayout extends PureComponent {
                   </IconButton>
                 </Grid>
               )}
-              <Grid item>{children}</Grid>
+              <Grid item xs={12}>{children}</Grid>
             </Grid>
           </Grid>
         </Grid>
