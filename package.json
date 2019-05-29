@@ -1,11 +1,11 @@
 {
   "name": "react-beautiful",
-  "version": "1.10.4",
+  "version": "1.11.0",
   "description": "React Beautiful - Boost up your React components",
   "main": "lib/index.js",
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
+    "@material-ui/core": "^4.0.1",
+    "@material-ui/icons": "^4.0.1",
     "lodash.isstring": "^4.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
