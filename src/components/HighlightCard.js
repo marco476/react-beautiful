@@ -23,7 +23,7 @@ const labelSizes = {
 
 const HighlightCard = ({ className, size, color, icon, value, label }) =>
   <Card style={{ backgroundColor: color && (color[800] || color) }} className={className}>
-    <Grid container alignItems="center" spacing={8}>
+    <Grid container alignItems="center" spacing={1}>
       {icon &&
         <Grid item xs={12} md={3}>
           <Grid container justify="center">

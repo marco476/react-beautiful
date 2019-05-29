@@ -39,7 +39,7 @@ class AsideLayout extends PureComponent {
 
     return (
       <React.Fragment>
-        <Grid spacing={24} container className={className}>
+        <Grid spacing={3} container className={className}>
           {isOpen && (
             <Grid item xs={12} md={4} lg={3} xl={2}>
               <Grid container direction="column">
