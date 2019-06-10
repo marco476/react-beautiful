@@ -21,8 +21,8 @@ const labelSizes = {
   'small': 'body1'
 };
 
-const HighlightCard = ({ className, size, color, icon, value, label }) =>
-  <Card style={{ backgroundColor: color && (color[800] || color) }} className={className}>
+const HighlightCard = ({ className, size, primaryColor, secondaryColor, icon, value, label }) =>
+  <Card style={{ backgroundColor: secondaryColor }} className={className}>
     <Grid container alignItems="center" spacing={1}>
       {icon &&
         <Grid item xs={12} md={3}>
@@ -35,7 +35,7 @@ const HighlightCard = ({ className, size, color, icon, value, label }) =>
         item
         xs={12}
         md={icon ? 9 : 12}
-        style={{ backgroundColor: color && (color[600] || color) }}
+        style={{ backgroundColor: primaryColor }}
       >
         <CardContent>
           {value && (
@@ -54,7 +54,8 @@ const HighlightCard = ({ className, size, color, icon, value, label }) =>
   </Card>;
 
 HighlightCard.propTypes = {
-  color: oneOfType([shape({}), string]),
+  primaryColor: string,
+  secondaryColor: string,
   icon: node,
   value: oneOfType([node, string]),
   label: oneOfType([node, string]),
