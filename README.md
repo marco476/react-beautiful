@@ -1,7 +1,3 @@
-<p align="center">
-  <a href="https://sigeosrl.com/" rel="noopener" target="_blank"><img width="280" src="https://sigeosrl.eu/wp-content/uploads/2018/07/SigeoDarkRetina-350x92.png" alt="SIGEO logo"></a></p>
-</p>
-
 # React Beautiful - Boost up your React components
 This project create **new React components** and add some **useful** feature to [Material](https://material-ui.com/) components **without touch the core base components**.
 
