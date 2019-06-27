@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import {bool, node, oneOfType, string} from 'prop-types';
+import { bool, node, oneOfType, string } from 'prop-types';
+
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
-import Text from '@material-ui/core/Typography';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
@@ -23,7 +23,7 @@ class AsideLayout extends PureComponent {
   handleCloseAside = () => this.setState({ isOpen: false });
 
   render() {
-    const { aside, collapsible, children, className, openText, closeText } = this.props;
+    const { aside, collapsible, children, className } = this.props;
     const { isOpen } = this.state;
 
     let childrenBreakpoints = { xs: 12 };
@@ -45,12 +45,13 @@ class AsideLayout extends PureComponent {
               <Grid container direction="column">
                 {collapsible && (
                   <Grid item xs={12}>
-                    <IconButton onClick={this.handleCloseAside}>
-                      <ChevronLeftIcon />
-                      <Text variant="subtitle1" color="textSecondary">
-                        {closeText}
-                      </Text>
-                    </IconButton>
+                    <Grid container justify="flex-end">
+                      <Grid item>
+                        <IconButton onClick={this.handleCloseAside}>
+                          <ChevronLeftIcon />
+                        </IconButton>
+                      </Grid>
+                    </Grid>
                   </Grid>
                 )}
                 <Grid item xs={12}>{aside}</Grid>
@@ -61,12 +62,13 @@ class AsideLayout extends PureComponent {
             <Grid container direction="column">
               {!isOpen && collapsible && (
                 <Grid item xs={12}>
-                  <IconButton onClick={this.handleOpenAside}>
-                    <ChevronRightIcon />
-                    <Text variant="subtitle1" color="textSecondary">
-                      {openText}
-                    </Text>
-                  </IconButton>
+                  <Grid container justify="flex-end">
+                    <Grid item>
+                      <IconButton onClick={this.handleOpenAside}>
+                        <ChevronRightIcon />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
                 </Grid>
               )}
               <Grid item xs={12}>{children}</Grid>
@@ -83,16 +85,12 @@ AsideLayout.propTypes = {
   aside: oneOfType([node, string]),
   children: oneOfType([node, string]),
   isOpen: bool,
-  collapsible: bool,
-  openText: string,
-  closeText: string
+  collapsible: bool
 };
 
 AsideLayout.defaultProps = {
   isOpen: true,
-  collapsible: true,
-  openText: "Open",
-  closeText: "Close"
+  collapsible: true
 };
 
 export default AsideLayout;
