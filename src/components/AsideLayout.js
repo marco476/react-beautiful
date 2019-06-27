@@ -4,7 +4,7 @@ import { bool, node, oneOfType, string } from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import MenuIcon from '@material-ui/icons/Menu';
 
 class AsideLayout extends PureComponent {
   state = {
@@ -62,13 +62,9 @@ class AsideLayout extends PureComponent {
             <Grid container direction="column">
               {!isOpen && collapsible && (
                 <Grid item xs={12}>
-                  <Grid container justify="flex-end">
-                    <Grid item>
-                      <IconButton onClick={this.handleOpenAside}>
-                        <ChevronRightIcon />
-                      </IconButton>
-                    </Grid>
-                  </Grid>
+                  <IconButton onClick={this.handleOpenAside}>
+                    <MenuIcon />
+                  </IconButton>
                 </Grid>
               )}
               <Grid item xs={12}>{children}</Grid>
