@@ -12,7 +12,7 @@ class AsideLayout extends PureComponent {
   };
 
   componentDidUpdate(prevProps) {
-    const { isOpen, } = this.props;
+    const { isOpen } = this.props;
 
     if (isOpen !== prevProps.isOpen) {
       this.setState({ isOpen });
@@ -42,10 +42,10 @@ class AsideLayout extends PureComponent {
         <Grid spacing={3} container className={className}>
           {isOpen && (
             <Grid item xs={12} md={4} lg={3} xl={2}>
-              <Grid container direction="column">
+              <Grid container direction='column'>
                 {collapsible && (
                   <Grid item xs={12}>
-                    <Grid container justify="flex-end">
+                    <Grid container justify='flex-end'>
                       <Grid item>
                         <IconButton onClick={this.handleCloseAside}>
                           <ChevronLeftIcon />
@@ -54,12 +54,14 @@ class AsideLayout extends PureComponent {
                     </Grid>
                   </Grid>
                 )}
-                <Grid item xs={12}>{aside}</Grid>
+                <Grid item xs={12}>
+                  {aside}
+                </Grid>
               </Grid>
             </Grid>
           )}
           <Grid item {...childrenBreakpoints}>
-            <Grid container direction="column">
+            <Grid container direction='column'>
               {!isOpen && collapsible && (
                 <Grid item xs={12}>
                   <IconButton onClick={this.handleOpenAside}>
@@ -67,7 +69,9 @@ class AsideLayout extends PureComponent {
                   </IconButton>
                 </Grid>
               )}
-              <Grid item xs={12}>{children}</Grid>
+              <Grid item xs={12}>
+                {children}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

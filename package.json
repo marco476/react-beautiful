@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "React Beautiful - Boost up your React components",
   "main": "lib/index.js",
   "peerDependencies": {
@@ -10,16 +10,19 @@
   "dependencies": {
     "@material-ui/core": "^4.0.1",
     "@material-ui/icons": "^4.0.1",
-    "lodash.isstring": "^4.0.1",
+    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.4"
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
@@ -32,6 +35,18 @@
   },
   "homepage": "https://github.com/marco476/react-beautiful#readme",
   "scripts": {
-    "build": "./node_modules/@babel/cli/bin/babel.js src -d lib --copy-files"
+    "build": "./node_modules/.bin/babel src -d lib --copy-files",
+    "prettier": "prettier --single-quote --jsx-single-quote --write '**/*.js*'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "npm run prettier",
+      "git add"
+    ]
   }
 }

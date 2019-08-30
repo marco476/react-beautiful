@@ -11,7 +11,9 @@ const Image = styled.div`
   
   ${props => !props.persistent && `display: none;`}
   
-  ${props => props.grayed && `
+  ${props =>
+    props.grayed &&
+    `
     transform: transale3d(0,0,0);
     transition: all 0.5s ease-in-out;
     filter: grayscale(0.8);
