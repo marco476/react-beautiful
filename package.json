@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "description": "React Beautiful - Boost up your React components",
   "main": "lib/index.js",
   "peerDependencies": {
